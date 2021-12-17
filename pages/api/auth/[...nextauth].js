@@ -5,16 +5,11 @@ export default NextAuth({
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
-      clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
-      clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
     }),
     // ...add more providers here
   ],
-  // theme: {
-  //   logo: "https://links.papareact.com/sq8",
-  //   brandColor: "#F13287",
-  //   colorScheme: "auto"
-  // },
   pages: {
     signIn: "/auth/signin"
   },

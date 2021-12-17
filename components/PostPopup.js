@@ -65,7 +65,7 @@ export default function PostPopup() {
               src={post.img}
             /> 
           </div>
-          <div className="p-5 flex flex-col">
+          <div className="p-5 flex flex-col max-h-[600px]">
             <div className="flex items-center">
               <img
                 className="rounded-full w-12 h-12 object-cover"
@@ -83,7 +83,7 @@ export default function PostPopup() {
 
             <hr className="my-5" />
 
-            <div className="md:flex-1 h-[20vh] md:h-auto">
+            <div className="md:flex-1 h-[20vh] md:h-auto overflow-y-auto scrollbar-thin scrollbar-thumb-black pr-5">
               {comments.map((comment) => (
                 <Comment
                   username={comment.data().username} 
